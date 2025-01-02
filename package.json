@@ -1,0 +1,31 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "this is namaste-react",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanmugha30/Namaste-React30.git"
+  },
+  "keywords": [],
+  "author": "shanmugha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanmugha30/Namaste-React30/issues"
+  },
+  "homepage": "https://github.com/shanmugha30/Namaste-React30#readme",
+  "devDependencies": {
+    "parcel": "^2.13.2",
+    "process": "^0.11.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
