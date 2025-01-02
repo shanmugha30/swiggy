@@ -1,0 +1,208 @@
+
+            const tag=document.createElement('h1');
+            tag.innerHTML="Hello World";
+            const container=document.getElementById('root');
+            container.appendChild(tag);
+
+
+browsers provide the power to understand the DOM.
+CDN – content delivery network
+It is where react libraries are hosted. From here we will use the react.
+React cdn link – it’s the core of react. 
+React Dom cdn link – which has all the DOM operations
+Why are using CDN?
+What is cross origin? Allows to access the resources which is hosted on domain different than the domain of webpage
+
+const heading=React.createElement('h1',{id:"heading"},"Hello World from React")
+
+console.log(heading) – this is an object
+
+The <head> tag is usually loaded before the body content. When React and React DOM are placed in the <head>, they are executed before the HTML elements.
+If the <div id="root"></div> is not yet available when React DOM tries to render, it will fail to find the target and throw an error.
+
+
+
+Npm – package manager. We can include the necessary package,utilities,libraries we need into npm.
+Package.json is main configuration for project, keeps track of all the dependencies (approx. version)
+
+Npm install -D parcel
+1.	Dev dependencies
+2.	Normal dependencies(used in production environment)
+
+Package-lock.json – locks the exact version for consistent project setup keeps the record  of dependencies & sub dependencies.
+
+Node modules fetch all the code for dependencies & so that we can use them.
+Transitive dependencies – for example parcel has its own dependencies & dependencies have its own dependencies.
+
+Those which cannot be regenerated need not be in git. We can simply ignore the files using ignore.
+
+npx parcel index.html – create server for app & project will be hosted in localhost
+
+cdn links is not preferred way to fetch react into our project. It will be costly as it will make network calls.
+So installing react as package in project is the best way.
+
+
+
+Parcel – build local server & host dev build in server, HMR (hot module replacement)
+	Parcel uses file watching algorithm.
+	Caching - Faster builds 
+	Image optimization
+	Bundle all files
+	Minification of files
+	Compress all files
+	Consistent hashing 
+	Code splitting
+	Differential bundling – support old browsers
+	Better error handling
+	HTTPS ()
+	Tree shaking – remove unused code
+	Different build for dev & production
+
+JSX -JavaScript syntax used to create React elements.
+
+JSX is a html like syntax
+JSX (babel transpiles before reaches JS engine done by parcel)
+
+JSX -> react. Create Element -> react element -> render(html element)
+
+
+
+
+
+
+
+Functional Based Component : 
+
+const HeadingComponent=() => {
+    return (<h1>JSX in Functional Component</h1>);
+}
+
+const HeadingComponent1=() => {
+    (<h1>JSX in Functional Component1</h1>);
+}
+Component composition - 
+
+
+
+
+const Title=() => {
+    return (
+        <h2 className="title">Title JSX in Functional Component</h2>
+    );
+}
+
+const HeadingComponent=() => {
+    return (
+        <div id="container">
+            <Title/>
+            <h1 className="header">JSX in Functional Component</h1>
+        </div>
+    
+);
+}
+
+
+food ordering app
+
+we can pass data dynamically using props,
+ passing arguments and they are objects.
+ 
+<RestroCard resName="Meghana Foods" cusines="chinese,North, Asian"/>
+
+
+types of export/import
+
+default export/import
+named export/import
+
+
+
+
+
+//state varible  - super powerful varible , 
+React Hooks - normal JS utility functions
+
+local state varibale
+useSate() - when ever state variable updates react re-render the webpage, used to create local state variables inside
+			functional component.
+const [listofRestro,setListofRestro]=useState(resList); array destructing
+
+useEffect(()=>{},[]); after the component has render , this callback funciton will be called , Intial render
+useEffect(()=>{}) -> it will be called after each render
+useEffect(()=>{},[btnName]) -> it get render every time btnName gets updated
+
+never create state varible inside if-else,for,funcitons loop
+
+
+
+
+
+react is fast & efficient in dom manipulaiton because of virtual dom
+as soon as data layer updates UI Layer will also update
+react uses recociliation algorithm(react fiber)
+virtual dom -> is representation of actual dom
+diff algorithm -> finds the difference b/w old dom & new dom & update webpage
+
+
+
+
+monolith
+microservice 
+
+
+load->render(basic skeleton) -> call api-> re-renders data
+
+
+
+shimmer UI
+
+
+Currying - where a function is transformed into a sequence of functions, each of which takes a single argument. 
+The idea is that instead of calling a function with multiple arguments, we call it with one argument at a time, 
+and each call returns another function that expects the next argument.
+
+
+
+
+function adda(a){
+    return function addb(b){
+        if(b){
+            return adda(a+b);
+        }
+        return a;
+    }
+}
+
+let a=adda(1)(2)(3)();
+console.log(a);
+
+
+
+const a={'name':"tilak"}
+const m={}
+const b={'name':"ram"}
+const c={'name':"krish"}
+m[a]={'name':"nikitha"};
+m[b]={'name':"srinu"}
+console.log(m[a])
+
+in javascript object will get converted to string when used as key
+
+
+
+const a=[]
+const b=[]
+
+console.log(a == b)
+console.log(a === b)
+
+array is non primitive datatype
+
+reconciliation algorithm - react Elements are expressed in virtual DOM objects . this process is called 
+			reconciliation or Diff algorithm . The Diff algorithm compares the difference between 
+			old virtual DOM & new virtual DOM and updates the portion where there is change.
+			
+			Because of which React does fast & efficient DOM manipulation.
+			
+			
+Routes -> whenever we have to create routes we need to create Routing Configuration
